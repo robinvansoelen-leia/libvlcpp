@@ -821,14 +821,14 @@ public:
     {
         return m_name;
     }
-
+    /*
     explicit TrackDescription( libvlc_track_description_t* c )
         : m_id( c->i_id )
     {
         if ( c->psz_name != nullptr )
             m_name = c->psz_name;
     }
-
+    */
 private:
     int m_id;
     std::string m_name;

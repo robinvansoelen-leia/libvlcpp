@@ -148,10 +148,11 @@ public:
      *
      * \param name  interface name, or empty string for default
      */
+    /*
     bool addIntf(const std::string& name)
     {
         return libvlc_add_intf( *this, name.length() > 0 ? name.c_str() : nullptr ) == 0;
-    }
+    }*/
 
     /**
      * Registers a callback for the LibVLC exit event. This is mostly useful

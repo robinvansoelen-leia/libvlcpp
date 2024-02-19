@@ -1026,10 +1026,12 @@ public:
      *
      * \see libvlc_audio_output_channel_t
      */
+    /*
     int channel()
     {
         return libvlc_audio_get_track(*this);
     }
+    */
 
     /**
      * Set current audio channel.
@@ -1038,10 +1040,12 @@ public:
      *
      * \see libvlc_audio_output_channel_t
      */
+    /*
     bool setChannel(int channel)
     {
         return libvlc_audio_set_track(*this, channel) == 0;
     }
+    */
 
     /**
      * Get current audio delay.
@@ -1862,7 +1866,7 @@ public:
         using TrackListPtr = std::unique_ptr<libvlc_media_tracklist_t,
                                 decltype(&libvlc_media_tracklist_delete)>;
         TrackListPtr trackList{ libvlc_media_player_get_tracklist( *this,
-                                    static_cast<libvlc_track_type_t>( type ), true ),
+                                    static_cast<libvlc_track_type_t>( type ), false ),
                                 &libvlc_media_tracklist_delete };
         if ( trackList == nullptr )
             return {};

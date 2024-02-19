@@ -554,7 +554,7 @@ class MediaPlayerEventManager : public EventManager
         template <typename Func>
         RegisteredEvent onEndReached(Func&& f)
         {
-            return handle( libvlc_MediaPlayerEndReached, std::forward<Func>( f ) );
+            return handle( libvlc_MediaListEndReached, std::forward<Func>( f ) );
         }
 
         /**
